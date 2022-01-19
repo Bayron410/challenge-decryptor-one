@@ -1,0 +1,19 @@
+* {
+    background-color: #F3F5FC;
+}
+
+img.logo {
+    margin-top: 3.9%;
+    margin-left: 5.8%;
+}
+
+/* #texto {
+    margin-top: 8.5%;
+    margin-left: 16.7%;
+} */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
