@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    background-color: #F3F5FC;
+}
+
+/* Main en dos div, programa y resultado */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/* Programa */
+/* Programa en tres div logo, area texto y botones*/
+#programa {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 19;
+}
+
+#logo {
+    margin-top: 3.9%;
+    margin-left: 5.8%;
+}
+
+.area-texto {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+#texto-entrada {
+    border: none;
+    background-color: transparent;
+    font-size: 32px;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+}
+
+#texto-entrada::placeholder {
+    color: #0A3871;
+    opacity: 70%;
+}
+
+/* Botones tiene flex y btn */
+#botones-programa {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #D8DFE8;
+    padding: 15px 40px;
+    margin: 20px;
+    border-radius: 14px;
+    border-color: #0A3871;
+    border-width: 2px;
+    font-size: 16px;
+    color: #0A3871;
+    min-width: 200px;
+    max-width: 200px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn:hover {
+    background-color: #0A3871;
+    color: white;
+}
+
+.btn:active {
+    background-color: #0A3871;
+    opacity: 80%;
+}
+
+
+/* Resultado */
+/* Tiene dos div, text-resultado y prueba */
+#resultado {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    flex-grow: 1;
+    max-width: 350px;
+    margin-top: 2.9%;
+    margin-right: 10%;
+    margin-left: auto;
+    margin-bottom: 2.9%;
+}
+
+#ninguno {
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #343A40;
+}
+
+#ninguno-texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #495057;
+}
+
+#buscador {
+    max-width: 300px;
+}
+
+#text-resultado {
+    margin-top: 13.9%;
+    margin: auto;
+}
+
+#area-resultado {
+    border: none;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+
+.invisible {
+    display: none;
+    height: 100%;
+}
+
+#botones-resultado {
+    display: flex;
+    justify-content: center;
+}
