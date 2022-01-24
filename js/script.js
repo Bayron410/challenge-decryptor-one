@@ -1,67 +1,63 @@
 let inputUsuario = document.querySelector("#texto-entrada");
 let botonEncriptar = document.querySelector("#encriptar");
 let botonDesencriptar = document.querySelector("#desencriptar");
-let botonPegar = document.querySelector("#pegar");
-let botonCopiar = document.querySelector("#copiar");
 let areaResultado = document.querySelector("#area-resultado");
 let figura = document.querySelector("#figura");
 let prueba = document.querySelector("#prueba");
+let main = document.querySelector("main");
+
+inicio();
+
+function inicio() {
+    if(screen.width < 1024) {
+        figura.classList.add("invisible");
+        main.classList.remove("nowrap");
+    } else {
+        figura.classList.remove("invisible");
+        main.classList.add("nowrap");
+    }
+    
+    if(screen.width <= 1200) {
+        inputUsuario.cols = "25";
+    } else {
+        inputUsuario.cols = "30";
+    }
+}
+
+window.addEventListener("resize", inicio);
+
+function comprobarCampos(texto) {
+    if(texto.length == 0) {
+        figura.classList.remove("invisible");
+        prueba.classList.remove("invisible");
+        areaResultado.classList.add("invisible");
+        botonCopiar.classList.add("invisible");
+        return true;
+    } else {
+        figura.classList.add("invisible");
+        prueba.classList.add("invisible");
+        areaResultado.classList.remove("invisible");
+        botonCopiar.classList.remove("invisible");
+        return false;
+    }
+}
 
 botonEncriptar.addEventListener("click", function() {
-    if(inputUsuario.value.length == 0) {
-        figura.classList.remove("invisible");
-        areaResultado.classList.add("invisible");
-        prueba.classList.remove("invisible");
-        botonCopiar.classList.add("invisible");
+
+    
+    if(comprobarCampos(inputUsuario.value)) {
         alert("Debe ingresar un texto para encriptar.");
     } else {
         resultado = encriptar(inputUsuario.value);
         areaResultado.value = resultado;
-        figura.classList.add("invisible");
-        areaResultado.classList.remove("invisible");
-        prueba.classList.add("invisible");
-        botonCopiar.classList.remove("invisible");
     }
 });
 
-function encriptar(texto) {
-    let encriptado = texto.replaceAll("e", "enter");
-    encriptado = encriptado.replaceAll("i", "imes");
-    encriptado = encriptado.replaceAll("a", "ai");
-    encriptado = encriptado.replaceAll("o", "ober");
-    encriptado = encriptado.replaceAll("u", "ufat");
-    return encriptado;
-};
-
 botonDesencriptar.addEventListener("click", function() {
-    if(inputUsuario.value.length == 0) {
-        figura.classList.remove("invisible");
-        areaResultado.classList.add("invisible");
-        prueba.classList.remove("invisible");
+    if(comprobarCampos(inputUsuario.value)) {
         alert("Debe ingresar un texto para desencriptar.");
     } else {
         resultado = desencriptar(inputUsuario.value);
         areaResultado.value = resultado;
-        figura.classList.add("invisible");
-        areaResultado.classList.remove("invisible");
-        prueba.classList.add("invisible");
     }
-});
-
-function desencriptar(texto) {
-    let desencriptado = texto.replaceAll("ufat", "u");
-    desencriptado = desencriptado.replaceAll("ober", "o");
-    desencriptado = desencriptado.replaceAll("ai", "a");
-    desencriptado = desencriptado.replaceAll("imes", "i");
-    desencriptado = desencriptado.replaceAll("enter", "e");
-    return desencriptado;
-};
-
-botonCopiar.addEventListener("click", function() {
-    navigator.clipboard.writeText(areaResultado.value);
-});
-
-botonPegar.addEventListener("click", function() {
-    navigator.clipboard.readText().then(
-        clipText => inputUsuario.value = clipText);
 });
