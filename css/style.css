@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-body {
+body, html {
     background-color: #F3F5FC;
+    display: grid;
 }
 
 /* Main en dos div, programa y resultado */
 main {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
+main.nowrap {
+    flex-wrap: nowrap;
+}
+
 /* Programa */
-/* Programa en tres div logo, area texto y botones*/
+/* Programa en tres div logo, area texto condiciones y botones*/
 #programa {
     display: flex;
     flex-direction: column;
@@ -45,6 +51,13 @@ main {
     opacity: 70%;
 }
 
+.condiciones {
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    justify-content: baseline;
+    color: #0A3871;
+}
+
 /* Botones tiene flex y btn */
 #botones-programa {
     display: flex;
@@ -60,7 +73,6 @@ main {
     border-width: 2px;
     font-size: 16px;
     color: #0A3871;
-    min-width: 200px;
     max-width: 200px;
     font-family: 'Inter', sans-serif;
 }
@@ -82,13 +94,13 @@ main {
     display: flex;
     flex-direction: column;
     background-color: white;
+    min-width: 350px;
     padding: 10px;
     border-radius: 20px;
     flex-grow: 1;
-    max-width: 350px;
     margin-top: 2.9%;
-    margin-right: 10%;
-    margin-left: auto;
+    margin-right: 1%;
+    margin-left: 1%;
     margin-bottom: 2.9%;
 }
 
@@ -133,4 +145,27 @@ main {
 #botones-resultado {
     display: flex;
     justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: #0A3871;
+    width: 100%;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+}
+
+.redes {
+    width: 25px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }

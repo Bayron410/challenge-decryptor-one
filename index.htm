@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encriptador</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,10 +13,17 @@
     <main>
         <div id="programa">
             <div id="logo">
-                <img src="/images/Vector.svg" alt="Alura" class="logo">
+                <a href="https://www.aluracursos.com/" target="_blank">
+                    <img src="/images/Vector.svg" alt="Alura" class="logo">
+                </a>
             </div>
             <div class="area-texto">
-                <textarea name="texto-entrada" id="texto-entrada" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                <textarea name="texto-entrada" id="texto-entrada" cols="30" rows="10"
+                    placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="condiciones">
+                <p><img src="images/Vector.png" alt="admiracion"> Acepta acentos, mayúsculas y caracteres especiales.
+                </p>
             </div>
             <div id="botones-programa">
                 <button class="btn" id="encriptar">Encriptar</button>
@@ -26,7 +33,8 @@
         </div>
         <div id="resultado">
             <div id="text-resultado">
-                <textarea name="area-resultado" id="area-resultado" cols="17" rows="10" disabled class="invisible"></textarea>
+                <textarea name="area-resultado" id="area-resultado" cols="17" rows="10" disabled
+                    class="invisible"></textarea>
                 <img src="/images/Muñeco.svg" alt="sinencontrar" id="figura">
             </div>
             <div id="prueba">
@@ -38,7 +46,24 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div>
+            <p>Todos los derechos reservados 
+                <a href="mailto:bayron410@gmail.com" class="link"> Bayron410 </a>
+                <a href="https://github.com/Bayron410">
+                    <img src="/images/github.png" alt="GitHub" class="redes">
+                </a>
+                <a href="https://www.linkedin.com/in/john-casta%C3%B1eda">
+                    <img src="/images/linkedin.png" alt="LinkedIn" class="redes">
+                </a>
+            </p>
+        </div>
+        <div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
+    <script src="js/copyPaste.js"></script>
+    <script src="js/encriptador.js"></script>
 </body>
 
 </html>
